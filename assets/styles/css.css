@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Titan One', cursive;
+    background: #161616;
+}
+nav {
+    height: 13vh;
+    background-image: linear-gradient(to bottom right, #2ca8bed7, #6738d6);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 9999999999999999;
+  }
+
+  #menu-toggle{
+    display: none;
+  }
+  .menu-icon {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-left: 15px;
+  }
+  
+  .menu a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .logo img {
+    width: 120px;
+  }
+
+  .menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: #fffb00;
+    transition: width 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .menu a:hover::after {
+    width: 100%;
+  }
+  
+/*Fazer o responsivo*/
+
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .menu li{
+       margin-top: 10px;
+      }
+    
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    #menu-toggle {
+      display: none;
+
+    }
+    .background{
+        z-index: -1;
+    }
+  
+    #menu-toggle:checked ~ .menu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-image: linear-gradient(to bottom right, #2ca8bed7, #6738d6);
+      padding: 20px;
+      flex-direction: column;
+    }
+    .content h1 {
+        font-size: 2rem; /* tamanho ajustado para telas menores */
+        word-break: break-word; /* quebra de palavra automática */
+      }
+      .card-container {
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateY(25vh);
+      }
+    
+      .card {
+        max-width: none;
+        width: 100%;
+        margin: 10px 0;
+      }
+  }
+  @media (max-width: 527px) {
+    #h1-responsable{
+        font-size: 2.3rem;
+    }
+  }
+  .background {
+    position: relative;
+    background-image: url(https://gamerism.co/wp-content/uploads/2019/12/ghost-of-tsushima-cover.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+}
+.content h1 {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+
+}
+.content h2{
+    font-family: 'Lora', serif;
+    margin-top: 15px;
+    color: white;;
+}
+.gradient-text {
+    background: linear-gradient(to bottom, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.btn-1{
+    background: none;
+    border: 3px solid #6738d6;
+    border-radius: 25px;
+    height: 8vh;
+    width: 25vh;
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background: #fff;
+    color: black;
+    border: none;
+    transition: all 1.5s;
+}
+.background-2 {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    background-image: url(https://s1.1zoom.me/b5050/226/359710-blackangel_2048x1152.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .background-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+  
+  .background-2 h3 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 35px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-family: 'Press Start 2P', cursive;
+    transform: translateX(-50%);
+  }
+  
+  .content-2 {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+    color: #777777;
+  }
